@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
 @import "tailwindcss";
 
+
+
+
+@theme {
+  --font-finger: "Finger Paint", cursive;
+  --font-bebas: "Bebas Neue", sans-serif;
+}
 
 :root {
   /* ---- core palette ---- */
@@ -136,13 +145,7 @@
    BASE RESET & GLOBAL STYLES
    ================================================================ */
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 
 html {
   scroll-behavior: smooth;
@@ -154,7 +157,6 @@ html {
 body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
-  line-height: 1.6;
   color: var(--color-text);
   background-color: var(--color-bg);
   overflow-x: hidden;
@@ -177,6 +179,10 @@ svg {
   color: transparent;
   -webkit-text-stroke: 2px rgba(0, 0, 0, 0.15);
   user-select: none;
+}
+
+.outline-texts {
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
 }
 
 /* Remove default list styles */
@@ -207,4 +213,15 @@ ol {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .outline-text {
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.125);
+  }
+
+  .outline-texts {
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: #ebebeb;
+  }
 }

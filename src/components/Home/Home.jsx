@@ -43,13 +43,13 @@ export const Home = () => {
                     <img
                         src="/hero.png"
                         alt="Hero"
-                        className="w-1/2 object-cover"
+                        className="w-1/2 object-cover min-w-[800px]"
                     />
 
                     {/* Color Overlay with Paint Stroke Reveal */}
                     <motion.div
                         className="absolute inset-0 flex justify-center items-center pointer-events-none"
-                        initial={{ clipPath: "inset(0 100% 100% 0)" }}
+                        initial={{ clipPath: "inset(100% 100% 50% 100%)" }}
                         animate={{ clipPath: "inset(0 0 0 0)" }}
                         transition={{
                             duration: 3,
@@ -59,7 +59,7 @@ export const Home = () => {
                         <img
                             src="/hero-color.png"
                             alt="Hero Color"
-                            className="w-1/2 object-cover"
+                            className="w-1/2 object-cover min-w-[800px]"
                             style={{
                                 WebkitMaskImage: "url('/brush.svg')",
                                 WebkitMaskSize: "90%",
@@ -86,7 +86,7 @@ export const Home = () => {
                     {/* Color Overlay with Paint Stroke Reveal */}
                     <motion.div
                         className="absolute inset-0 flex justify-center items-center pointer-events-none"
-                        initial={{ clipPath: "inset(0 100% 100% 0)" }}
+                        initial={{ clipPath: "inset(100% 100% 50% 100%)" }}
                         animate={{ clipPath: "inset(0 0 0 0)" }}
                         transition={{
                             duration: 3,
@@ -114,20 +114,23 @@ export const Home = () => {
 
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none w-full">
                 <motion.h1
-                    className="outline-text text-[60px] md:text-[180px] lg:text-[250px] font-black uppercase leading-none flex flex-wrap justify-start"
+                    className="outline-text text-[60px] md:text-[120px] lg:text-[250px] font-black uppercase leading-none flex flex-wrap justify-start text-left"
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
                 >
                     {text.split("").map((char, i) => (
-                        <motion.span
-                            key={i}
-                            variants={letterVariants}
-                            className="inline-block"
-                            style={{ display: char === " " ? "inline" : "inline-block" }}
-                        >
-                            {char === " " ? "\u00A0" : char}
-                        </motion.span>
+                        char === " " ? (
+                            <div key={i} className="w-full" />
+                        ) : (
+                            <motion.span
+                                key={i}
+                                variants={letterVariants}
+                                className="inline-block"
+                            >
+                                {char}
+                            </motion.span>
+                        )
                     ))}
                 </motion.h1>
             </div>

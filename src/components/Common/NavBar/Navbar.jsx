@@ -28,10 +28,9 @@ export const Navbar = () => {
                     fixed top-5 left-5 z-[60]
                     flex justify-center items-center
                     w-10 h-10
-                    bg-[var(--color-bg-elevated)]
-                    border border-[var(--color-border)]
+                    bg-[#29274D]
+                    
                     rounded-[var(--radius-md)]
-                    shadow-[var(--shadow-md)]
                     cursor-pointer
                     transition-all duration-300
                     hover:shadow-[var(--shadow-lg)]
@@ -40,9 +39,9 @@ export const Navbar = () => {
                 aria-label="Toggle navigation"
             >
                 {isOpen ? (
-                    <HiX className="w-5 h-5 text-[var(--color-text)] transition-transform duration-300" />
+                    <HiX className="w-5 h-5 text-white  duration-300" />
                 ) : (
-                    <HiMenuAlt3 className="w-5 h-5 text-[var(--color-text)] transition-transform duration-300" />
+                    <HiMenuAlt3 className="w-5 h-5 text-white transition-transform duration-300" />
                 )}
             </button>
 
@@ -83,13 +82,14 @@ export const Navbar = () => {
                                 onClick={() => setIsOpen(false)}
                                 className="
                                     no-underline
-                                    text-xl
-                                    font-bold
-                                    text-[var(--color-text-inverse)]
+                                    text-2xl
+                                    text-white
                                     hover:scale-110
                                     transition-transform duration-200
                                     focus:outline-none
                                     drop-shadow-md
+                                    font-finger
+                                    font-medium
                                 "
                                 style={{
                                     animationDelay: `${index * 50}ms`,
