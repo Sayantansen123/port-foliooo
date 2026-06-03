@@ -130,7 +130,7 @@ export const About = () => {
 
                             {/* Subtitle — fades up */}
                             <motion.div
-                                className="text-[20px] text-[#e60000] md:text-[30px] leading-none font-finger mt-1"
+                                className="text-[16px] text-[#e60000] md:text-[30px] leading-none font-finger mt-1"
                                 style={{ willChange: "opacity, transform" }}
                                 variants={textVariants}
                                 initial="hidden"
@@ -142,7 +142,7 @@ export const About = () => {
 
                             {/* Body — fades up */}
                             <motion.div
-                                className="font-finger text-[16px] text-black md:text-[20px] pt-2"
+                                className="font-finger text-[12px] text-black md:text-[20px] pt-2"
                                 style={{ willChange: "opacity, transform" }}
                                 variants={textVariants}
                                 initial="hidden"
@@ -163,7 +163,7 @@ export const About = () => {
                                 animate="visible"
                                 custom={eDelay + 1.1}
                             >
-                                <div className="text-white font-finger p-1 px-2 text-sm text-center border-2 rounded-4xl bg-[#e60000] border-[#e83e3e] hover:bg-white/10 hover:text-black transition-colors duration-200">
+                                <div className="text-white font-finger p-1 px-2 text-[10px] md:text-sm text-center border-2 rounded-4xl bg-[#e60000] border-[#e83e3e] hover:bg-white/10 hover:text-black transition-colors duration-200">
                                     Show more...
                                 </div>
                             </motion.div>
@@ -199,7 +199,7 @@ export const About = () => {
                     <motion.div
                         className="
                 fixed
-                bottom-30
+                bottom-35
                 left-1/2
                 -translate-x-1/2
                 z-30
